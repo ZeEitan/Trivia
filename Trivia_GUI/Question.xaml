@@ -1,0 +1,59 @@
+﻿<Window x:Class="Trivia_GUI.Question"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trivia_GUI"
+        mc:Ignorable="d"
+        Title="Question" Height="450" Width="800" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <StackPanel>
+            <Label x:Name="question" Margin="0,10,0,0" Content="What is the main ship used by Commander Shepard in the Mass Effect Franchise called?" Foreground="Black" FontFamily="Segoe UI Black" Height="103" Width="775" FontSize="18" RenderTransformOrigin="0.468,1.882"/>
+            <Border BorderBrush="Black" BorderThickness="2" Width="50" Margin="0,10,0,0">
+                <TextBlock x:Name="time" Text="a" TextAlignment="Center"/>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="2" Width="70" Height="50" Margin="600,-30,0,0" Name="borderOfAnswered">
+                <TextBlock x:Name="answeredTextBlock" Text="0/0" TextAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="2" Width="70" Height="50" Margin="-600,-50,0,0" Name="borderOfPlayerUsername">
+                <TextBlock x:Name="playerUsername" Text="Name" TextAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+            </Border>
+            <Grid Height="260" Width="764" Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="389*"/>
+                    <ColumnDefinition Width="411*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnAns1" Content="Ans1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Height="40" FontSize="22" FontFamily="Arial Black" Background="#FF1E232C" Foreground="White" Margin="61,65,0,0" Click="btnAns1_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    
+                </Button>
+                <Button x:Name="btnAns2" Content="Ans2" HorizontalAlignment="Center" VerticalAlignment="Top" Width="300" Height="40" FontSize="22" FontFamily="Arial Black" Background="#FF1E232C" Foreground="White" Margin="0,65,0,0" Grid.Column="1" Click="btnAns2_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="btnAns3" Content="Ans3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Height="41" FontSize="22" FontFamily="Arial Black" Background="#FF1E232C" Foreground="White" Margin="61,147,0,0" Click="btnAns3_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="btnAns4" Content="Ans4" HorizontalAlignment="Center" VerticalAlignment="Top" Width="300" Height="41" FontSize="22" FontFamily="Arial Black" Background="#FF1E232C" Foreground="White" Margin="0,147,0,0" Grid.Column="1" Click="btnAns4_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</Window>

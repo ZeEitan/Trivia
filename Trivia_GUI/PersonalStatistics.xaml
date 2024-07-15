@@ -1,0 +1,22 @@
+﻿<Window x:Class="Trivia_GUI.PersonalStatistics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trivia_GUI"
+        mc:Ignorable="d"
+        Title="Personal Statistics" Height="450" Width="800" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Label x:Name="Titel" Content="Personal Statistics" HorizontalAlignment="Center" Margin="0,36,0,0" VerticalAlignment="Top" Width="540" FontSize="48" FontWeight="Bold" FontFamily="Algerian" Height="77"/>
+        <Label x:Name="GoBack" Content="Back" HorizontalAlignment="Left" Margin="738,10,0,0" VerticalAlignment="Top" Width="37" PreviewMouseDown="GoBack_Click"/>
+
+        <StackPanel HorizontalAlignment="Center" Margin="0,158,0,0" Orientation="Vertical" VerticalAlignment="Top">
+            <Label x:Name="GamesPlayed" Content="Games Played: " Foreground="#FF8391A1" FontFamily="Segoe UI Black" Width="367" FontSize="22"/>
+            <Label x:Name="QuestionsAnswered" Content="Questions Answered: " Foreground="#FF8391A1" FontFamily="Segoe UI Black" Width="366" FontSize="22"/>
+            <Label x:Name="CorrectAnswers" Content="Correct Answers: " Foreground="#FF8391A1" FontFamily="Segoe UI Black" Width="364" FontSize="22"/>
+            <Label x:Name="AvgAnswerTime" Content="Avg Answer Time: " Foreground="#FF8391A1" FontFamily="Segoe UI Black" Width="364" FontSize="22"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,32 @@
+﻿<Window x:Class="Trivia_GUI.JoinRoom"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trivia_GUI"
+        mc:Ignorable="d"
+        Title="Join Room" Height="450" Width="800" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Label x:Name="GoBack" Content="Back" HorizontalAlignment="Left" Margin="738,10,0,0" VerticalAlignment="Top" Width="37" PreviewMouseDown="GoBack_Click"/>
+
+        <Grid HorizontalAlignment="Center" Height="360" Margin="0,36,0,0" VerticalAlignment="Top" Width="456">
+            <Label x:Name="Titel" Content="Join room" HorizontalAlignment="Center" VerticalAlignment="Top" Width="262" FontSize="48" FontWeight="Bold" FontFamily="Algerian" Height="77"/>
+
+            <ListBox x:Name="Rooms" d:ItemsSource="{d:SampleData ItemCount=24}" Margin="0,144,0,46" FontFamily="Segoe UI Black" SelectionChanged="Rooms_SelectionChanged" BorderBrush="#FFABADB3" Background="#FFEAEAEA" Foreground="#FF494A4C">
+                <ListBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+                </ListBox.Resources>
+            </ListBox>
+            <Button x:Name="btnJoinRoom" Content="Join Room" HorizontalAlignment="Center" Margin="0,319,0,0" VerticalAlignment="Top" Width="300" Height="41" FontSize="22" FontFamily="Arial Black" Background="#FF1E232C" Foreground="White" IsEnabled="False" Click="btnJoinRoom_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Label x:Name="SelectedRoom" Content="Selected room: " HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" Foreground="#FF8391A1" FontFamily="Segoe UI Black" Height="29" Width="456"/>
+        </Grid>
+    </Grid>
+</Window>
